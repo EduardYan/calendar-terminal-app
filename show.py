@@ -37,6 +37,7 @@ def change_days_month(data: list):
     for days in data:
         for idx, day in enumerate(days):
             if day == 0:
+                # chaning the 0 for '-'
                 days[idx] = "--"
 
     return data
@@ -72,7 +73,7 @@ def create_month_message(month: str) -> str:
     """
 
     message = Text(month)
-    message.stylize("blue underline")
+    message.stylize("blue underline") # style wit blue
 
     return message
 
@@ -83,6 +84,7 @@ def get_name_month(month_number: str) -> str:
     for parameter for return your name.
     """
 
+    # the month -1 for not use 0 as 1
     return MONTHS[int(month_number) - 1]
 
 
