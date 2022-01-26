@@ -133,6 +133,8 @@ def show_calendar(calendar: MyCalendar):
             f"\nCalendar [bold underline]{month_name}[/bold underline] [bold underline]{year}[/bold underline]"
         )
 
+        month_name = create_month_message(month_name)
+
         # # creating table for each month and columns
         table = Table(title=month_name, style="blue")
         table.add_column("Monday", justify="center")

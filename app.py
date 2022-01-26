@@ -1,7 +1,22 @@
+#!/usr/bin/python3
 """
 This is a terminal
 applicattion for watch the calendars
 of years and months.
+
+Use Example:
+-y The year
+-m The month
+
+------------------------
+python3 app.py -y 2020 -m 12
+python3 app.py --y 2020 -m 1
+python3 app.py -m 5
+------------------------
+
+For see alls the options:
+python3 app.py --help
+
 """
 
 from calendar import Calendar, IllegalMonthError
