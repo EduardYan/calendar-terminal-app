@@ -3,7 +3,6 @@ This module have functions
 for show the calendar.
 """
 
-from turtle import pos
 from rich.table import Table
 from rich.text import Text
 from models.mycalendar import MyCalendar
