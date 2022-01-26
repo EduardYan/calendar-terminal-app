@@ -96,7 +96,6 @@ def show_calendar(calendar: MyCalendar):
 
     if month == "all":
         console.print(f"\nCalendar [bold underline]{year}[/bold underline]")
-        console.print(month)
         for idx, month in enumerate(data):
             message = create_month_message(MONTHS[idx])
 
