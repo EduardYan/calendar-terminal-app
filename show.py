@@ -5,9 +5,12 @@ for show the calendar.
 
 from rich.table import Table
 from rich.text import Text
+from rich.panel import Panel
+from rich import print
 from models.mycalendar import MyCalendar
 from helpers.utils import console
 from data.months import MONTHS
+from config import VERSION, NAME
 
 
 def change_days_year(data: list):
@@ -96,7 +99,15 @@ def show_calendar(calendar: MyCalendar):
     year, month, data = select_data(calendar)
 
     if month == "all":
-        console.print(f"\nCalendar [bold underline]{year}[/bold underline]")
+        # console.print(f"\nCalendar )
+        panel = Panel(
+            f"[cyan bold underline]{year}[/]\t\t\t\t\t\t\t\t\t\t\t\t[green]Version {VERSION}[/green]",
+            title = f'[cyan]{NAME}[/cyan]',
+            border_style='blue'
+        )
+
+        print(panel)
+
         for idx, month in enumerate(data):
             message = create_month_message(MONTHS[idx])
 
@@ -129,9 +140,12 @@ def show_calendar(calendar: MyCalendar):
     else:
         month_name = get_name_month(month)
 
-        console.print(
-            f"\nCalendar [bold underline]{month_name}[/bold underline] [bold underline]{year}[/bold underline]"
+        panel = Panel(
+            f'[cyan bold underline]{year}[/]\t\t\t\t\t\t\t\t\t\t\t\t[green]Version {VERSION}[/green]',
+            title = f'[cyan]{NAME}[/cyan]',
+            border_style='blue'
         )
+        print(panel)
 
         month_name = create_month_message(month_name)
 

@@ -16,13 +16,9 @@ You must install the dependencies with the requirements file, executing:
 pip3 install -r requirements.txt
 ```
 
-# Run.
+# Run and Use.
 
 __Pass the year and the month for the calendar.__
-```bash
-python3 app.py -y 2020 -m 12
-python3 app.py --y 2017 -m 3
-```
 
 __For default the year is the year current in the system, and the months are alls.__
 
@@ -30,6 +26,13 @@ __For default the year is the year current in the system, and the months are all
 # for defaults values
 python3 app.py
 ```
+
+```bash
+python3 app.py -y 2020 -m 12
+python3 app.py --year 2018 -month 3
+```
+
+![use-image](./doc/use-image.png)
 
 __The month not must be 01, 02, 03, etc. Message error lauched.__
 

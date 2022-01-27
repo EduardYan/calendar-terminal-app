@@ -7,6 +7,7 @@ with the arguments passed in the execution.
 from optparse import OptionParser
 from messages.help import YEAR_MESSAGE, MONTH_MESSAGE
 from datetime import datetime
+from messages.help import USAGE
 
 # functions of config
 get_date_current = lambda: {"year": str(datetime.now().year), "month": str(datetime.now().month)}
@@ -18,7 +19,7 @@ def get_options() -> tuple:
     and arguments passed for parameter.
     """
 
-    parser = OptionParser()
+    parser = OptionParser(usage = USAGE)
 
     parser.add_option(
         "-y",
